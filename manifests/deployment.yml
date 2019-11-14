@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: philankosiazchcaptureorder 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: philankosiazchcaptureorder 
+    spec:
+      containers:
+        - name: philankosiazchcaptureorder 
+          image: akstrainingmycontainerregistry.azurecr.io/philankosiazchcaptureorder
+          ports:
+          - containerPort: 8080
